@@ -1,0 +1,84 @@
+
+
+Variable in python : 
+
+variable is an type of container where we can store/hold the value also variable is an name given to an memory address 
+
+
+Identifier : 
+
+An identifier is the name given to a program element so that Python can identify and refer to it.
+In simple words:
+Identifier = Name used to identify something in a Python program.
+
+syntax : 
+
+variableName = value
+
+
+to declared an Variable we need to followed this Naming conventions rules : 
+
+cannot used keywords as variable name 
+space not allowed 
+cannot start with numbers 
+name should be Logical & meaningful 
+underscored is allowed 
+snake_case r allowed (student_name,student_age,student_city)
+
+
+examples : 
+
+ a = 45
+ a1 = 43
+ std_s = 3
+
+
+a, b, c = 10, 20, 30
+a = b = c = 100
+
+
+
+swapping numbers : 
+
+a = 10
+b = 20
+
+a, b = b, a
+
+print(a)
+print(b)
+ 
+note : A variable can be assigned a new value.
+
+age = 78
+age = 45
+
+python is an case-sensitive 
+
+name 
+NAME
+Name
+
+
+Typecasting in python : 
+
+typecasting means conversion of one datatype into another datatype   : 
+there r two types of typecasting : 
+1. Implicit 
+2. Explicit 
+
+
+
+(Implicit typecasting)
+a = 10
+b = 10.45
+c = a+b
+
+print(c)
+
+(explicit typecasting)
+a = 10
+b = 10.45
+c = a+int(b)
+
+print(c)

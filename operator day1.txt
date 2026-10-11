@@ -1,0 +1,95 @@
+
+Operator in python : 
+
+Operator --> an operator is an special symbol which is used to performed operations based on values or operands 
+
+Real-life example
+Suppose you have ₹500 and your friend gives you ₹200.
+You want to calculate the total amount:
+₹500 + ₹200 = ₹700
+
+Operator  --> +   --> dr
+operand  --> value --> unary , binary , ternary   --> patient
+operation --> process  --> heart surgery 
+
+
+Operand: The value or variable on which an operation is performed.
+Operator: The symbol or keyword that tells Python what operation to perform.
+Operation: The actual action performed using an operator on operands.
+
+
+how many Operators r exist in python : 
+
+Arithmetic 
+Assignment  
+comparison 
+logical
+bitwise  
+identity 
+membership
+
+
+1. Arithmetic : 
+
+it is used to represent an Mathematical calculations  
+
++,-,*,/,%,//(Floor Division),**(Exponential) : 
+
+
+
++
+
+Addition
+Adds two values
+10 + 3 = 13
+
+-
+
+Subtraction
+Subtracts the second value from the first
+10 - 3 = 7
+
+*
+
+Multiplication
+Multiplies two values
+10 * 3 = 30
+
+/
+
+Division
+Returns the division result as a float
+10 / 3 = 3.3333...
+
+
+//
+
+Floor division
+Returns the quotient rounded down
+10 // 3 = 3
+
+
+%
+
+Modulus
+Returns the remainder
+10 % 3 = 1
+
+
+**
+
+Exponentiation
+Raises a value to a power
+2 ** 3 = 8
+
+
+
+exercise : 
+
+Calculate the total price of 5 notebooks if one notebook costs ₹40.
+Calculate the remaining balance after spending ₹350 from ₹1,000.
+Calculate the area of a rectangle with length 15 and width 8.
+Divide 57 chocolates equally among 6 students and display the quotient and remainder.
+Calculate the square and cube of a number.
+Convert a total number of minutes, such as 135, into hours and remaining minutes using // and %.
+Calculate the average of three numbers using arithmetic operators.

@@ -1,0 +1,118 @@
+Comments
+
+# Single-line comment
+
+'''
+Multi-line text
+'''
+
+
+Escape Sequences
+
+\n → New line
+\t → Tab
+\' → Single quote
+\" → Double quote
+\\ → Backslash
+\b → Backspace
+
+
+print()
+
+print("Hello Python")
+
+sep
+
+print("10", "20", "30", sep="-")
+Output:
+10-20-30
+
+
+end
+
+print("Hello", end="-")
+print("Python")
+Output:
+Hello-Python
+
+
+Keywords
+import keyword
+print(keyword.kwlist)
+
+Module
+import math
+
+
+String Concatenation
+
+a = "Hello"
+b = "Python"
+
+print(a + " " + b)
+Output:
+Hello Python
+
+
+Different Data Types
+
+a = 30
+b = "Ram"
+
+print(a + b)       # Error
+
+Convert the integer:
+print(str(a) + b)
+
+
+Complex Data Type
+a = 4 + 7j
+or:
+a = complex(4, 7)
+
+
+
+Input
+
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+salary = float(input("Enter salary: "))
+number = complex(input("Enter number: "))
+
+Important Points to Remember
+
+# is used for a single-line comment.
+Triple quotes can be used for multi-line explanatory text.
+\n moves the output to a new line.
+\' prints a single quote.
+\" prints a double quote.
+sep separates multiple values in print().
+end controls what is printed at the end of print().
+Python keywords have predefined meanings.
+import is used to import a module.
+String concatenation is performed using +.
+Direct str + int concatenation is not allowed.
+str() can convert a value into a string.
+Complex numbers use j for the imaginary part.
+input() returns a string by default.
+int(), float(), and complex() can be used for type conversion.
+
+Most Important Formula for Beginners
+
+input()
+   ↓
+Always String
+   ↓
+Type Conversion
+   ↓
+Required Data Type
+
+Example:
+
+age = int(input("Enter age: "))
+
+means:
+
+input() → Take input
+int()   → Convert input into integer
+age     → Store the value

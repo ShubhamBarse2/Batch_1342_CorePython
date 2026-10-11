@@ -1,0 +1,60 @@
+internal working flow of python file : 
+
+.py
+ ↓
+Compiler
+ ↓
+Bytecode
+ ↓
+Interpreter / PVM
+ ↓
+Execution
+ ↓
+Runtime + OS + Hardware
+ ↓
+Output
+
+
+
+
+basic topics of python :  
+
+single line comment 
+#
+for multi line used 
+'''
+LOC
+
+''' 
+escapes sequence character 
+print("hey i am good boy \n with positive attitude")  --> for new line 
+\'used for single Quote\'  \" for double Quote\"   --> it will printed as it is 
+
+print("2034","12","07", sep="-") --> separate is used for separate with special character 
+print("2034","12","07", end="-\n")  --> i want ending with any character or value then mentioned it 
+
+ import keyword         --> module --> for showing all keywords we used  
+ print(keyword.kwlist)
+
+concatenation : 
+of different datatypes is not possible in python 
+a = 30
+b = 20  # b = "ram" --> in that case show error 
+print(a+b) 
+
+complex datatype declared --> a = complex(4,7) 
+
+input function : --> to take input from user 
+
+ref code : 
+
+name = input("Enter name: ")                    # str
+age = int(input("Enter age: "))                 # int
+salary = float(input("Enter salary: "))         # float
+number = complex(input("Enter number: "))       # complex --> 10+5j
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+ref code : 
+
+
+# print("Hello Users ")
+
+"""
+a = 10 
+b = 80 
+c = 10
+
+print(a == c)   # boolean --> True 
+print(a is c)   # boolean --> True   
+
+"""
+
+'''
+a = 10 
+b = 80 
+c = 10
+
+print(a == c)   # boolean --> True 
+print(a is c)   # boolean --> True   
+
+'''
+
+# x,y = "mr. ","ram"
+
+# Typecasting -->  Converting value of one datatype to Another  
+
+# print(x+y+z)
+
+# print(x+y)
+
+# Escape sequence character 
+
+# \n 
+
+# print("python is an  \'dynamic\' , high level , \n interpreted , \n platform indepedent langugue ")
+# print("python is an  \"dynamic\" , high level , \n interpreted , \n platform indepedent langugue ")
+
+# print("ram","prakash","kadu" , sep="/")
+
+# print("My DOB --> ","12","12","2001" , sep="-")
+
+# print("ram" , "nsk" ,end="\@234567")
+# print("Hello")
+
+
+# print("python ", "is an Easy", "Language" ,sep="_" ,end="\n")
+# print("fff")
+
+# 5 --> 10 
+# employee customer 
+
+name = input("Enter ur Name here : ")
+age = int(input("Enter ur Age : "))
+salary = float(input("Enter ur Salary : "))
+is_Log =bool(input("Enter ur Log Choise "))
+extra = complex(input("Enter value"))
+
+print(name,age,salary,is_Log,extra)
+
+
+
+import keyword 
+
+print(keyword.kwlist)  # single line comment 
+
+'''
+asdfghjh
+sdfghj
+sdfghgf
+asdfghg
+fdsasdfgh
+ '''  
+age, name , city = 45,"ritesh","pune"
+
+print(age,name,city)
+
+
+

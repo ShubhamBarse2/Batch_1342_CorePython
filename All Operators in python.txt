@@ -1,0 +1,226 @@
+All Operators in python : 
+
+Operator --> an operator is an special symbol which is used to performed operations based on values or operands 
+
+Real-life example
+Suppose you have ₹500 and your friend gives you ₹200.
+You want to calculate the total amount:
+₹500 + ₹200 = ₹700
+
+Operator  --> +   --> dr
+operand  --> value --> unary , binary , ternary   --> patient
+operation --> process  --> heart surgery 
+
+
+Operand: The value or variable on which an operation is performed.
+Operator: The symbol or keyword that tells Python what operation to perform.
+Operation: The actual action performed using an operator on operands.
+
+Arithmetic 
+Assignment  
+comparison 
+logical
+bitwise  
+identity 
+membership
+
+
+
+1. Arithmetic : 
+
+it is used to represent an Mathematical calculations  
+
++,-,*,/,%,//(Floor Division),**(Exponential) : 
+
+
+Practise Questions : 
+
+Calculate the total price of 5 notebooks if one notebook costs ₹40.
+Calculate the remaining balance after spending ₹350 from ₹1,000.
+Calculate the area of a rectangle with length 15 and width 8.
+Divide 57 chocolates equally among 6 students and display the quotient and remainder.
+Calculate the square and cube of a number.
+Convert a total number of minutes, such as 135, into hours and remaining minutes using // and %.
+Calculate the average of three numbers using arithmetic operators.
+
+
+2. Comparison Operators in Python : 
+
+it is used to compared values : 
+
+Python provides these comparison operators:
+Operator	Meaning	Example	Result
+==	Equal to	10 == 10	True
+!=	Not equal to	10 != 20	True
+>	Greater than	20 > 10	True
+<	Less than	10 < 20	True
+>=	Greater than or equal to	20 >= 20	True
+<=	Less than or equal to	10 <= 20	True
+
+
+
+practise Questions on Comparison operator : 
+
+Take two numbers from the user and check whether they are equal.
+Take two numbers and check which comparison results are True.
+Take a person's age and check whether the age is greater than 18.
+Take two numbers and check whether the first number is greater than or equal to the second.
+Take two numbers and check whether they are different.
+Take a student's marks and check whether marks are greater than or equal to 40.
+Take two numbers and display the result of all six comparison operators.
+
+
+
+3. Assignment Operator : 
+
+An assignment operator is used to assign a value to a variable or update the value of an existing variable.
+
+Operator	Meaning	Example
+
+=	Assign	                a = 10
++=	Add and assign	        a += 5
+-=	Subtract and assign	a -= 5
+*=	Multiply and assign	a *= 5
+/=	Divide and assign	a /= 5
+//=	Floor divide and assign	a //= 5
+%=	Modulus and assign	a %= 5
+**=	Power and assign	a **= 5
+
+Practise Questions on Assignment Operator : 
+
+Q1 Take a number from the user and increase it by 10 using +=.
+Q2 Take a salary from the user and increase it by 5000 using +=.
+Q3 Take a bank balance and subtract an expense using -=.
+Q4 Take a number and multiply it by 5 using *=.
+Q5 Take a number and divide it by 2 using /=.
+Q6 Take a number and find its remainder when divided by 3 using %=.
+Q7 Take a number and calculate its cube using **=.
+
+
+4.Logical Operators :
+
+logical operators allow us to combine multiple conditions.
+A logical operator is used to combine or modify Boolean expressions (True / False).
+
+and
+or
+not
+
+Operator	Meaning
+and	      All conditions must be True
+or	      At least one condition must be True
+not	      Reverses the Boolean result
+
+
+
+Practise Questions on logical Operator : 
+
+Q1 a = 10b = 20print(a < b and b > 15)
+Q2 a = 10b = 20print(a > b or b > 15)
+Q3 a = 10b = 20print(not(a > b))
+Q4 age = 25print(age >= 18 and age <= 60)
+Q5 marks = 35print(marks >= 40 or marks == 35)
+Q6 Take age and salary from the user and check:
+   age >= 18 AND salary >= 20000
+Q7 Take two numbers from the user and check whether:
+   first number is greater than 10 OR
+   second number is greater than 10 
+
+
+
+
+5. Membership Operator : 
+They are used to check whether a particular value exists inside a sequence or collection
+
+in 
+not in 
+
+in vs not in
+Operator	Meaning
+in	      Value exists
+not in	      Value doesn't exist
+
+
+Practise Questions : 
+
+Q1 Create a string: language = "Python" Check whether "P" exists in the string.
+Q2 Check whether "Java" exists in: courses = ["Python", "Java", "SQL"]
+Q3 Check whether "C++" does not exist in the above list.
+Q4 Take a name from the user and check whether "a" exists in the name.
+Q5 Take an email from the user and check whether "@" exists in it.
+Q6 Create: numbers = [10, 20, 30, 40, 50] Check whether 30 and 100 are present.
+Q7 Create: languages = ["Java", "Python", "C", "C++"] Check whether "Python" is present and "Ruby" is not present.
+
+
+
+
+
+6. Identity Operator : 
+
+An identity operator checks whether two variables refer to the same object in memory.
+In simple words:
+is asks: "Are these two variables referring to the exact same object?"
+Whereas == asks:
+"Do these two objects have equal values?"
+This is the most important difference.
+
+imp Note : == compares values. is compares identity.
+
+is
+is not
+
+is → Are both variables referring to the same object?
+is not → Are both variables referring to different objects?
+
+
+
+| `==` | `is` | `is not` |
+|---|---|---|
+| Compares values | Compares identity | Compares identity |
+| Asks "same value?" | Asks "same object?" | Asks "different object?" |
+| Commonly used for value comparison | Used when object identity matters | Used when different identity matters |
+| Example: `a == b` | Example: `a is b` | Example: `a is not b` |
+
+note : 
+
+==       → SAME VALUE?
+is       → SAME OBJECT?
+is not   → DIFFERENT OBJECT?
+
+
+
+7. Bitwise Operator : 
+
+Bitwise operators work bit by bit on integers. 
+number is represented in binary (0 and 1).
+
+
+Operator	Name	Example
+&	Bitwise AND	5 & 3
+|	Bitwise OR      5 | 3
+^	Bitwise XOR	5 ^ 3
+~	Bitwise NOT	~5
+<<	Left Shift	5 << 1
+>>	Right Shift	20 >> 1
+
+
+&   → BOTH
+|   → ANY ONE
+^   → DIFFERENT
+~   → REVERSE
+<<  → LEFT
+>>  → RIGHT
+
+
+Practise Questions : 
+
+Write a Python program to take two integers as input and print their Bitwise AND (&) result.
+Write a program to take two integers and print their Bitwise OR (|) result.
+Write a program to take two integers and print their Bitwise XOR (^) result.
+Take an integer as input and print its Bitwise NOT (~) result.
+Take an integer as input and perform left shift by 1 using <<.
+
+
+
+
+
