@@ -1,0 +1,39 @@
+
+
+String day 2 : 
+
+Python with operator how it works : 
+
+n = "python"
+
+print(n+ "lang ")
+print(n * 4)
+print("py" in n)
+print("py" not in n)
+print("apple" > "Apple")
+
+
+String slicing : 
+
+String slicing is the process of extracting a portion of a string using index positions.
+
+syntax : 
+
+string[start : stop : step]
+
+The start index is included, but the stop index is excluded.
+
+
+
+s[start:stop] — start is included; stop is excluded.
+s[start:stop:step] — step controls how you move through the string.
+s[::-1] — reverses the string.
+
+
+imp note : 
+
+start is included.
+stop is excluded.
+A positive step moves left to right.
+A negative step moves right to left.
+The direction must match the start and stop positions.

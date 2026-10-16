@@ -1,0 +1,47 @@
+
+name = "Shreyas"  # Sample string for demonstration
+
+# ==================== CASE & FORMATTING METHODS ====================
+print(name.capitalize())  # string first letter in capital
+print(name.upper())  # get string uppercase letters
+print(name.lower())  # get string in lowercase letters
+print(name.title())  # capitalize the first letter of every word
+print(name.swapcase())  # swap uppercase to lowercase and vice versa
+print(name.casefold())  # aggressive lowercasing for aggressive caseless matching
+print(name.center(30, "-"))  # centers the string in width 30 with padding character
+print(name.ljust(20, "-"))  # left align string in specified width with padding
+print(name.rjust(20, "-"))  # right align string in specified width with padding
+print(name.zfill(10))  # pad string on the left with zeros to fill width
+
+# ==================== SEARCHING & COUNTING METHODS ====================
+print(name.count("e"))  # count the repetitive element in string otherwise it will provide 0
+print(name.index("h"))  # get index of value (raises ValueError if not found)
+print(name.find("z"))  # index of value if found, or -1 if string does not contain this letter
+print(name.rfind("s"))  # highest index of substring, or -1 if not found
+print(name.rindex("s"))  # highest index of substring (raises ValueError if not found)
+
+# ==================== BOOLEAN CHECK METHODS ====================
+print(name.startswith("s"))  # check if the string starts with the specified value (True/False)
+print(name.endswith("s"))  # provide result for whether last letter is contained or not in string (True/False)
+print(name.islower())  # check the whole string is in lowercase or not
+print(name.isupper())  # check the whole string is in uppercase or not
+print(name.isspace())  # check the string contains only whitespace not any other
+print(name.isalpha())  # check if all characters in the string are alphabetic
+print(name.isdigit())  # check if all characters in the string are digits
+print(name.isalnum())  # check if all characters in the string are alphanumeric
+print(name.isdecimal())  # check if all characters in the string are decimal
+print(name.isnumeric())  # check if all characters in the string are numeric
+print(name.isprintable())  # check if all characters in the string are printable
+print(name.istitle())  # check if string is titlecased
+
+# ==================== MODIFICATION & MANIPULATION METHODS ====================
+print(name.replace("Sh", "B "))  # replace old value with new one
+print(name.strip())  # remove leading and trailing whitespaces
+print(name.lstrip())  # remove leading whitespaces
+print(name.rstrip())  # remove trailing whitespaces
+print(name.split("e"))  # split string by separator into a list
+print(name.rsplit("e"))  # split string from right by separator into a list
+print(name.splitlines())  # split string at line breaks into a list
+print("-".join(["S", "h", "r"]))  # join elements of an iterable with string as separator
+print(name.partition("e"))  # split string into a 3-tuple (before, separator, after)
+print(name.rpartition("e"))  # split string from right into a 3-tuple

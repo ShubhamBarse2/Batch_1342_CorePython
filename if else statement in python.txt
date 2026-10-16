@@ -1,0 +1,175 @@
+If Else Statement in python : 
+
+1. What are conditional statements : 
+
+Definition: Conditional statements are decision-making statements that allow a program to execute different blocks of code depending on whether a condition is True or False.
+Real-life example: If it rains, take an umbrella. Otherwise, go without one.
+
+
+types of if else : 
+
+1. simple if statement   --> The if statement executes a block of code only when its condition is True.
+2. if else statement  --> if block executes when the condition is true; otherwise, the else block executes.
+2. if-elif-else statement --> Python checks them from top to bottom and executes the first block whose condition is true.
+4. nested if statement  --> A nested if is an if statement written inside another if or else block. It is useful when one decision depends on another decision.
+5. nested if else statement --> A nested if-else is a conditional statement in which an if-else statement is written inside another if or else block. It is used when a second decision depends on the result of the first condition.
+6. nested if elif else statement  --> A nested if-elif-else is a conditional structure in which an if-elif-else statement is placed inside another conditional block. It is used when a program must make multiple decisions based on an earlier condition.
+
+
+
+1. simple if statement : 	
+
+syntax : 
+
+if condition:
+    statement
+
+
+example : 
+
+
+age = 20
+if age >= 18:
+    print("Eligible to vote")
+
+
+
+
+2.  if else statement : 
+
+syntax : 
+
+if condition1:
+    statement1
+else:
+    statement2
+
+
+example : 
+
+
+number = 7
+
+if number % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+
+
+
+
+3. if-elif-else : 
+
+syntax : 
+
+ if condition1:
+    statement1
+elif condition2:
+    statement2
+elif condition3:
+    statement3
+else:
+    statement4
+
+
+
+example : 
+
+
+marks = 75
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+elif marks >= 50:
+    print("Grade C")
+else:
+    print("Fail")
+
+
+
+
+4. nested if : 
+
+syntax : 
+
+if condition1:
+    if condition2:
+        statement1
+
+
+
+example : 
+
+
+age = 22
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+
+
+
+
+5. nested if else : 
+
+syntax :
+
+
+if condition1:
+    if condition2:
+        statement1
+    else:
+        statement2
+else:
+    statement3
+
+
+example : 
+
+age = 20
+has_id = False
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+    else:
+        print("ID required")
+else:
+    print("Entry denied")
+
+
+
+6. nested if elif else : 
+
+syntax : 
+
+if condition1:
+    if condition2:
+        statement1
+    elif condition3:
+        statement2
+    else:
+        statement3
+else:
+    statement4
+
+example : 
+
+
+marks = 82
+
+if marks >= 35:
+    if marks >= 90:
+        print("Grade A")
+    elif marks >= 75:
+        print("Grade B")
+    elif marks >= 60:
+        print("Grade C")
+    else:
+        print("Pass")
+else:
+    print("Fail")

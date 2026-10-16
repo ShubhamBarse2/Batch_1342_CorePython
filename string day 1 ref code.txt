@@ -1,0 +1,50 @@
+
+# name = "rahul"
+# print(type(name))
+# print(id(name))
+
+# print(name[0])
+# print(name[1])
+# print(name[2])
+# print(name[3])
+# print(name[4])
+# print(name[5])
+
+# password = "ram@123"
+
+# msg = '''python is an easy language'''
+
+# print(len(msg))
+# print(msg[25])
+
+# s = ''
+
+# s1 = "  "
+
+# print(len(s1))
+# print(s)
+# s1 = '   55'
+# print(s1[1])
+
+
+# name = "prakash"
+
+# print(name[-1])
+# print(name[-4])
+# print(name[-6])
+# # print(name[-9])
+
+
+# f_name = "keshav"
+# print(f_name)
+# print(id(f_name))
+
+# f_name = f_name + " patil"
+# print(f_name)
+# print(id(f_name))
+
+
+# language = "Python"
+# language[0] = "K"
+# print(language)
+

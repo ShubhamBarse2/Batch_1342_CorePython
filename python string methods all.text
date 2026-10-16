@@ -1,0 +1,340 @@
+# Python String Methods —
+
+**Important:** Python strings are immutable. String methods generally return a result rather than modifying the original string. Some methods return integers, Booleans, tuples, lists, or bytes instead of strings.
+
+## 1. Case conversion methods
+
+```python
+s = "hello WORLD"
+
+print(s.upper())       # HELLO WORLD: converts all letters to uppercase
+print(s.lower())       # hello world: converts all letters to lowercase
+print(s.capitalize())  # Hello world: capitalizes the first character
+print(s.title())       # Hello World: capitalizes the start of each word
+print(s.swapcase())    # HELLO world: changes uppercase to lowercase and vice versa
+print(s.casefold())    # hello world: lowercase conversion useful for caseless comparisons
+```
+
+## 2. Searching and counting methods
+
+```python
+s = "hello hello python"
+
+print(s.find("hello"))     # 0: first matching position, or -1 if not found
+print(s.rfind("hello"))    # 6: last matching position, or -1 if not found
+print(s.index("python"))   # 12: first matching position; raises ValueError if not found
+print(s.rindex("hello"))   # 6: last matching position; raises ValueError if not found
+print(s.count("hello"))    # 2: counts non-overlapping occurrences
+```
+
+note: `find()` and `index()` both search for a substring, but differ when the substring is absent: `find()` returns `-1`, while `index()` raises `ValueError`.
+
+
+## 3. Checking the beginning and ending
+
+```python
+s = "Python Programming"
+
+print(s.startswith("Python"))  # True: checks whether the string starts with Python
+print(s.startswith("Pro", 7))   # True: checks from index 7
+print(s.endswith("ing"))        # True: checks whether the string ends with ing
+print(s.endswith("Python"))     # False: the string does not end with Python
+```
+
+## 4. Replacing and removing text
+
+```python
+s = "I like Java"
+
+print(s.replace("Java", "Python"))  # I like Python: replaces matching text
+print(s.replace("a", "@"))          # I like J@v@: replaces all occurrences of a
+print(s.replace("a", "@", 1))       # I like J@va: replaces only the first occurrence
+
+s = "www.example.com"
+
+print(s.removeprefix("www."))  # example.com: removes the specified prefix if present
+print(s.removesuffix(".com"))  # www.example: removes the specified suffix if present
+```
+
+`removeprefix()` and `removesuffix()` are available in Python 3.9 and later.
+
+## 5. Removing whitespace and characters
+
+```python
+s = "   Hello Python   "
+
+print(s.strip())       # Hello Python: removes whitespace from both ends
+print(s.lstrip())      # Hello Python   : removes whitespace from the left
+print(s.rstrip())      #    Hello Python: removes whitespace from the right
+
+s = "###Python###"
+
+print(s.strip("#"))    # Python: removes # characters from both ends
+print(s.lstrip("#"))   # Python###: removes # characters from the left
+print(s.rstrip("#"))   # ###Python: removes # characters from the right
+```
+
+note :  `strip("#")` removes matching characters from the ends; it does not remove an exact substring.
+
+## 6. Splitting strings into parts
+
+```python
+s = "Java Python SQL"
+
+print(s.split())          # ['Java', 'Python', 'SQL']: splits on whitespace
+print(s.split("a"))       # ['J', 'v', ' Python SQL']: splits at each a
+print(s.split(" ", 1))    # ['Java', 'Python SQL']: splits at most once
+print(s.rsplit(" ", 1))   # ['Java Python', 'SQL']: splits from the right, at most once
+
+s = "one\ntwo\nthree"
+
+print(s.splitlines())     # ['one', 'two', 'three']: splits at line boundaries
+```
+
+## 7. Joining strings
+
+```python
+words = ["Python", "Java", "SQL"]
+
+print(" ".join(words))    # Python Java SQL: joins using a space
+print("-".join(words))    # Python-Java-SQL: joins using a hyphen
+print("".join(words))     # PythonJavaSQL: joins without a separator
+print(", ".join(words))   # Python, Java, SQL: joins using comma and space
+```
+
+The separator is written before `.join()`. Every item in the iterable must be a string.
+
+## 8. Partitioning strings
+
+```python
+s = "name=Shubham=Python"
+
+print(s.partition("="))
+# ('name', '=', 'Shubham=Python'): splits at the first =
+
+print(s.rpartition("="))
+# ('name=Shubham', '=', 'Python'): splits at the last =
+
+print(s.partition(":"))
+# ('name=Shubham=Python', '', ''): separator not found
+
+print(s.rpartition(":"))
+# ('', '', 'name=Shubham=Python'): separator not found
+```
+
+Unlike `split()`, `partition()` returns exactly three parts as a tuple.
+
+
+## 9. String validation methods
+
+These methods return `True` or `False`. They are useful for validating text input.
+
+```python
+print("Python".isalpha())        # True: only letters
+print("Python123".isalpha())    # False: contains digits
+
+print("12345".isdigit())        # True: digit characters
+print("123".isdecimal())        # True: decimal digit characters
+print("123".isnumeric())        # True: numeric characters
+print("Python123".isalnum())    # True: letters and digits only
+
+print("hello".islower())        # True: cased letters are lowercase
+print("HELLO".isupper())        # True: cased letters are uppercase
+print("Hello World".istitle())  # True: title-case pattern
+print("   ".isspace())          # True: whitespace only
+print("".isspace())             # False: empty strings have no characters
+
+print("user_name1".isidentifier())   # True: valid Python identifier
+print("123name".isidentifier())      # False: cannot start with a digit
+print("Hello!".isprintable())        # True: all characters are printable
+print("Hello\nWorld".isprintable())  # False: newline is not printable
+print("Python".isascii())            # True: all characters are ASCII
+print("café".isascii())              # False: é is not ASCII
+```
+
+### Difference between `isdecimal()`, `isdigit()` and `isnumeric()`
+
+```python
+s = "²"
+
+print(s.isdecimal())  # False
+print(s.isdigit())    # True
+print(s.isnumeric())  # True
+```
+
+`isnumeric()` accepts the broadest range of numeric characters. `isdigit()` accepts some additional digit characters such as superscript digits. `isdecimal()` is narrower.
+
+## 10. Alignment and padding methods
+
+```python
+s = "Python"
+
+print(s.center(10))       #   Python  : centers the string in width 10
+print(s.center(10, "-"))  # --Python--: fills extra space with hyphens
+
+print(s.ljust(10))        # Python    : left-aligns the string
+print(s.ljust(10, "*"))   # Python****: adds * on the right
+
+print(s.rjust(10))        #     Python: right-aligns the string
+print(s.rjust(10, "*"))   # ****Python: adds * on the left
+
+print("42".zfill(5))      # 00042: adds zeros to the left
+print("-42".zfill(5))     # -0042: places zeros after the minus sign
+```
+
+## 11. Expanding tab characters
+
+```python
+s = "Name\tAge"
+
+print(s.expandtabs())
+# Replaces the tab with spaces; default tab stops are every 8 columns.
+
+print(s.expandtabs(4))
+# Uses tab stops every 4 columns. The number of inserted spaces depends
+# on the current column position.
+```
+
+## 12. Translation methods: `maketrans()` and `translate()`
+
+These methods allow multiple character substitutions or removals through a translation table.
+
+```python
+s = "hello world"
+
+table = str.maketrans("ae", "12")
+# Creates a mapping: a becomes 1, e becomes 2.
+
+print(s.translate(table))  # h2llo world
+
+table = str.maketrans("", "", "ae")
+# Creates a mapping that removes a and e.
+
+print(s.translate(table))  # hllo world
+
+s = "Python123"
+table = str.maketrans("123", "abc")
+print(s.translate(table))  # Pythonabc
+```
+
+## 13. String encoding
+
+```python
+s = "Hello"
+
+result = s.encode("utf-8")
+# Converts the string into bytes using UTF-8 encoding.
+
+print(result)        # b'Hello'
+print(type(result))  # <class 'bytes'>
+```
+
+`str` represents text, while `bytes` represents binary data. Encoding is useful when storing or transferring text as bytes.
+
+## 14. String formatting methods
+
+### `format()`
+
+```python
+name = "Shubham"
+age = 25
+
+print("My name is {} and my age is {}".format(name, age))
+# My name is Shubham and my age is 25
+
+print("Name: {0}, Age: {1}".format(name, age))
+# Name: Shubham, Age: 25
+
+print("Age: {age}, Name: {name}".format(name=name, age=age))
+# Age: 25, Name: Shubham
+
+print("Price: {:.2f}".format(99.567))
+# Price: 99.57: formats the number to two decimal places
+```
+
+### `format_map()`
+
+```python
+student = {"name": "Shubham", "course": "Python"}
+
+print("Name: {name}, Course: {course}".format_map(student))
+# Name: Shubham, Course: Python
+# Uses dictionary keys to fill the placeholders.
+```
+
+## 15. More examples with optional arguments
+
+```python
+s = "banana"
+
+print(s.count("a", 2, 6))  # 2: counts a between indices 2 and 5
+print(s.find("a", 2))      # 3: searches starting from index 2
+
+print("Python.py".startswith(("Py", "Ja")))  # True: matches any supplied prefix
+print("report.pdf".endswith((".pdf", ".txt")))  # True: matches any supplied suffix
+
+print("-".join("ABC"))  # A-B-C: joins individual characters using a hyphen
+```
+
+## Complete method checklist
+
+### Case conversion
+- `capitalize()`
+- `casefold()`
+- `lower()`
+- `upper()`
+- `title()`
+- `swapcase()`
+
+### Searching and matching
+- `count()`
+- `find()`
+- `rfind()`
+- `index()`
+- `rindex()`
+- `startswith()`
+- `endswith()`
+
+### Replacement and removal
+- `replace()`
+- `strip()`
+- `lstrip()`
+- `rstrip()`
+- `removeprefix()`
+- `removesuffix()`
+
+### Splitting and joining
+- `split()`
+- `rsplit()`
+- `splitlines()`
+- `partition()`
+- `rpartition()`
+- `join()`
+
+### Validation
+- `isalnum()`
+- `isalpha()`
+- `isascii()`
+- `isdecimal()`
+- `isdigit()`
+- `isnumeric()`
+- `isidentifier()`
+- `islower()`
+- `isupper()`
+- `istitle()`
+- `isspace()`
+- `isprintable()`
+
+### Alignment and translation
+- `center()`
+- `ljust()`
+- `rjust()`
+- `zfill()`
+- `expandtabs()`
+- `maketrans()`
+- `translate()`
+
+### Formatting and encoding
+- `format()`
+- `format_map()`
+- `encode()`
