@@ -1,0 +1,145 @@
+
+Match case in python : 
+
+The match-case statement was introduced in Python 3.10. It is used to compare a value against multiple patterns and execute the code associated with a matching pattern.
+It is known as structural pattern matching because it can match not only individual values but also the structure of tuples, lists, dictionaries, and objects.
+
+
+ex : 
+
+Real-life example
+Consider a menu in a training institute:
+- Choice 1 → Java course
+- Choice 2 → Python course
+- Choice 3 → Data Analytics course
+- Any other choice → Invalid choice
+The match-case statement makes it easy to handle such multiple-choice situations.
+
+
+
+Syntax : 
+
+match expression:
+    case pattern1:
+        statement1
+    case pattern2:
+        statement2
+    case pattern3:
+        statement3
+    case _:
+        default_statement
+
+
+Note : 
+
+Keyword	Explanation
+
+match	        Starts the pattern-matching statement.
+expression	The value or expression to evaluate.
+case	        Defines a pattern to match.
+pattern	        Specifies a value or structure to match against.
+:	        Indicates the beginning of a block.
+Indentation	Defines the statements belonging to a case.
+_	        Wildcard pattern that matches any value not matched earlier.
+
+
+
+ref code : 
+
+
+number = 2
+
+match number:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case 3:
+        print("Three")
+    case _:
+        print("Invalid number")
+
+
+
+
+language = "Python"
+
+match language:
+    case "Java":
+        print("Java selected")
+    case "Python":
+        print("Python selected")
+    case "SQL":
+        print("SQL selected")
+    case _:
+        print("Unknown language")
+
+
+
+
+imp : 
+
+Multiple values in one case
+The OR pattern (|) allows multiple alternatives in a single case.
+
+
+match day:
+    case 1 | 2 | 3 | 4 | 5:
+        print("Weekday")
+    case 6 | 7:
+        print("Weekend")
+    case _:
+        print("Invalid day")
+
+
+
+
+user input : 
+
+
+choice = int(input("Enter choice: "))
+
+match choice:
+    case 1:
+        print("Java course")
+    case 2:
+        print("Python course")
+    case 3:
+        print("Data Analytics course")
+    case _:
+        print("Invalid choice")
+
+
+
+practise Questions base on match case : 
+
+
+Write a program that accepts an integer from 1 to 7 and prints the corresponding day of the week using match-case.
+Write a program that accepts a number from 1 to 4 and prints the corresponding season: Summer, Monsoon, Winter, or Spring.
+Write a program that accepts a character representing a vowel (a, e, i, o, u) and prints 'Vowel'. For any other character, print 'Not a vowel'.
+Write a program that accepts a number from 1 to 3 and prints 'Low', 'Medium', or 'High', respectively.
+Write a program that accepts a string representing a traffic light ('red', 'yellow', or 'green') and prints the corresponding action.
+Accept a grade as a string ("A", "B", "C", or "F") and print the corresponding performance description. Print "Invalid grade" for any other value.
+Accept a Boolean value and use match-case to print:
+- True → "User is active"
+- False → "User is inactive"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
