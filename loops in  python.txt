@@ -1,0 +1,120 @@
+
+Loops in python : 
+
+
+A loop is a control-flow statement that executes a block of code repeatedly, based on a condition or by iterating over a sequence of values.
+
+Real-life example : 
+Suppose you want to print "Good Morning" 5 times.
+Without a loop, you need to write:
+
+print("Good Morning")
+print("Good Morning")
+print("Good Morning")
+print("Good Morning")
+print("Good Morning")
+
+
+using loops : 
+
+for i in range(5):
+    print("Good Morning")
+
+
+
+
+Python has two main loop statements:
+
+1. for loop 
+2. while loop 
+
+
+
+1. Syntax of for loop in Python : 
+
+for variable in sequence:    
+statement(s)
+
+
+ex : 
+for i in range(1, 6):
+    print(i)
+
+
+
+Explanation:
+- for: Starts the loop.
+- variable: Receives each value.
+- in: Takes values from an iterable.
+- range(1, 6): Generates numbers from 1 to 5.
+- statement(s): Executes for each value.
+
+
+2.Syntax of while loop in Python : 
+
+initialization
+while condition:    
+statement(s)   
+update
+
+
+
+Example:
+i = 1
+while i <= 5:    
+print(i)    
+i += 1
+
+
+
+Explanation:
+- initialization: Sets the starting value.
+- while: Starts the loop.
+- condition: Checked before every iteration.
+- statement(s): Code executed while the condition is True.
+- update: Changes the variable to help the loop terminate.
+
+
+Important: Infinite loop
+An infinite loop occurs when the condition never becomes False.
+
+
+
+
+note : 
+
+
+Understanding range() in depth
+The range() function generates a sequence of integers, commonly used with for loops.
+
+It has three common forms.
+
+Form 1: range(stop)
+ex : 
+for i in range(5):    
+print(i)
+ :
+Explanation: It starts at 0 by default and stops before 5.
+
+
+
+
+
+Form 2: range(start, stop) 
+ex : 
+for i in range(1, 6):
+    print(i)
+
+Explanation: Starts at 1 and stops before 6.
+
+
+
+
+Form 3: range(start, stop, step)
+ex :
+for i in range(2, 11, 2):
+    print(i) 
+
+Explanation: Starts at 2, increases by 2, and stops before reaching 11.
+
+
