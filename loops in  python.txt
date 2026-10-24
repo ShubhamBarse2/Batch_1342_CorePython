@@ -1,3 +1,7 @@
+Remember:
+- ord() converts a character to its integer code.
+- chr() converts an integer code to its corresponding ch aracter.
+
 
 Loops in python : 
 
