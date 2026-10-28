@@ -1,0 +1,191 @@
+
+Fundamental Data Types in python :
+Fundamental types represent a single value or an individual piece of data. 
+
+ex -->  
+
+age = 25             # int
+price = 99.50        # float
+number = 3 + 4j      # complex
+name = "Rahul"        # str
+is_active = True     # bool
+result = None        # NoneType
+
+
+Collective data types in python : 
+
+Collective types can hold multiple values or represent a collection of elements.
+
+ex --> 
+
+list, tuple, range, dict, set, frozenset
+
+
+
+List datatype : 
+
+A list is a built-in collection datatype used to store multiple values in a single variable.
+
+Real-life example: Suppose you want to store the names of five students in one variable. Instead of creating five separate variables, you can use a list.
+
+
+students = ["Rahul", "Priya", "Amit", "Sneha", "Rohit"]
+
+print(students)
+
+
+output : 
+
+['Rahul', 'Priya', 'Amit', 'Sneha', 'Rohit']
+
+
+imp Note : 
+
+- A list stores multiple values.
+- A list is written using square brackets [].
+- Items are separated by commas.
+- A list can contain different datatypes.
+- A list is mutable, meaning we can modify its elements.
+- Lists allow duplicate values.
+- Lists maintain insertion order.
+
+
+How to create a list : 
+
+Example 1: List of integers
+numbers = [10, 20, 30, 40, 50]
+print(numbers)
+Example 2: List of strings
+names = ["Amit", "Priya", "Rahul"]
+print(names)
+Example 3: Mixed datatypes
+data = [101, "Shubham", 85.5, True]
+print(data)
+Example 4: Empty list
+values = []
+print(values)
+print(type(values))
+
+Output:
+[]
+<class 'list'>
+
+
+
+List indexing : 
+
+Positive : 
+Python lists use zero-based indexing. The first element has index 0.
+
+For example:
+numbers = [10, 20, 30, 40, 50]
+print(numbers[0])
+print(numbers[1])
+print(numbers[2])
+
+output : 10 20 30
+
+negative : 
+Negative indexing starts from the end of the list.
+
+for example : 
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-5])
+
+output : 50 40 10
+
+
+
+
+Updating list elements : 
+
+Lists are mutable, so we can change an element after creating the list.
+
+numbers = [10, 20, 30, 40]
+numbers[1] = 200
+print(numbers)
+
+
+output : [10, 200, 30, 40]
+
+
+
+
+
+Traversing a list using loops : 
+
+Using a for loop:
+numbers = [10, 20, 30, 40, 50]
+for num in numbers:  
+  print(num)
+
+
+
+Using a while loop:
+numbers = [10, 20, 30, 40, 50]
+i = 0
+while i < len(numbers): 
+   print(numbers[i])  
+   i += 1
+
+
+inbuild python provided some functions like as : 
+
+marks = [78, 85, 92, 67, 88]
+print(len(marks))
+print(min(marks))
+print(max(marks))
+print(sum(marks))
+
+
+
+List slicing : 
+Slicing extracts a portion of a list.
+
+syntax : list_name[start:stop:step]
+
+numbers = [10, 20, 30, 40, 50, 60]
+
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[3:])
+print(numbers[::-1])
+
+
+
+
+list methods : 
+
+
+Important list methods : 
+
+Method   	Example purpose
+append()	Add one element
+extend()	Add multiple elements
+insert()	Insert at a position
+remove()	Remove by value
+pop()	        Remove and return an element
+clear() 	Empty the list
+index()	        Find the first matching element's index
+count()	        Count occurrences of a value
+sort()	        Sort the list in place
+reverse()	Reverse the list in place
+copy()	        Create a shallow copy
+
+
+
+imp : 
+
+append() — Add one element at the end
+insert() — Add an element at a particular index
+extend() — Add multiple elements from an iterable
+
+
+ 
+
+
+
+
