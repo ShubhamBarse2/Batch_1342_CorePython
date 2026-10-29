@@ -1,0 +1,622 @@
+
+Tuple in python : 
+A tuple is a built-in collection datatype in Python used to store multiple values in a single variable.
+
+A tuple is:
+- Ordered: Items maintain their sequence.
+- Allows duplicates: The same value can appear multiple times.
+- Immutable: Individual elements cannot be reassigned after the tuple is created.
+- Heterogeneous: It can contain different datatypes.
+- Indexed: Elements can be accessed using positive and negative indexes.
+- Iterable: We can traverse it using loops.
+
+Example:
+student = ("prakash", 23, "Pune")
+print(student)
+print(type(student))
+
+
+
+Output:
+('prakash', 23, 'Pune')
+<class 'tuple'>
+
+
+Real-world example: A coordinate pair such as (18.5204, 73.8567) can be stored in a tuple when you want to keep its elements together without allowing direct reassignment.
+2. How to create a Tuple
+A. Using parentheses
+numbers = (10, 20, 30, 40)print(numbers)print(type(numbers))
+
+
+
+Output:
+(10, 20, 30, 40)
+<class 'tuple'>
+
+
+B. Tuple with different datatypes
+data = (101, "Rahul", 85.5, True)
+print(data)
+
+Output:
+(101, 'Rahul', 85.5, True)
+
+
+C. Without parentheses
+Python can create a tuple from comma-separated values.
+numbers = 10, 20, 30
+print(numbers)
+print(type(numbers))
+
+Output:
+(10, 20, 30)
+<class 'tuple'>
+
+
+Imp Note : The commas are what make these values a tuple; parentheses are commonly used for clarity.
+
+D. Single-element tuple
+This is a common interview question.
+a = (10)
+b = (10,)
+print(a, type(a))
+print(b, type(b))
+
+Output:
+10 <class 'int'>
+(10,) <class 'tuple'>
+
+
+Explanation:
+- (10) is an integer enclosed in parentheses.
+- (10,) is a tuple because it contains a comma.
+
+E. Empty tuple
+t = ()
+print(t)
+print(type(t))
+print(len(t))
+
+
+Output:
+()
+<class 'tuple'>
+0
+
+
+F. Using the tuple() constructor
+a = tuple([10, 20, 30])
+b = tuple("CAT")
+print(a)
+print(b)
+
+
+Output:
+(10, 20, 30)
+('C', 'A', 'T')
+
+
+The tuple() function converts an iterable into a tuple.
+
+3. Tuple indexing
+Indexing is used to access individual elements.
+t = (10, 20, 30, 40, 50)
+
+
+Element	Positive index	Negative index
+10	0	-5
+20	1	-4
+30	2	-3
+40	3	-2
+50	4	-1
+
+Positive indexing
+t = (10, 20, 30, 40, 50)
+print(t[0])
+print(t[2])
+print(t[4])
+
+Output:
+10
+30
+50
+
+
+Negative indexing
+t = (10, 20, 30, 40, 50)
+print(t[-1])
+print(t[-2])
+print(t[-5])
+
+Output:
+50
+40
+10
+
+Invalid index
+t = (10, 20, 30)# print(t[5])
+
+
+
+If uncommented, the statement raises IndexError because index 5 does not exist.
+
+Remember: Indexing rules are the same for lists, tuples, and strings.
+
+4. Tuple slicing
+
+Slicing retrieves a portion of a tuple.
+
+Syntax:
+tuple_name[start:stop:step]
+
+
+
+- start: Index where selection begins.
+- stop: Index where selection ends; it is excluded.
+- step: Number of positions to move each time.
+Example:
+t = (10, 20, 30, 40, 50, 60)
+print(t[1:4])
+print(t[:3])
+print(t[3:])
+print(t[::2])
+print(t[::-1])
+
+Output:
+(20, 30, 40)
+(10, 20, 30)
+(40, 50, 60)
+(10, 30, 50)
+(60, 50, 40, 30, 20, 10)
+
+
+More slicing examples
+t = (10, 20, 30, 40, 50)
+print(t[1:5:2])
+print(t[-4:-1])
+print(t[4:1:-1])
+print(t[1:2])
+
+
+Output:
+(20, 40)
+(20, 30, 40)
+(50, 40, 30)
+(20,)
+
+
+Even when a slice contains just one element, its result is still a tuple.
+
+5. Tuple immutability
+Immutability means that tuple elements cannot be reassigned after creation.
+
+Example:
+t = (10, 20, 30)# t[0] = 100print(t)
+
+Output:
+(10, 20, 30)
+
+
+The commented statement would raise:
+TypeError: 'tuple' object does not support item assignment
+
+
+List versus Tuple modification :
+a = [10, 20, 30]
+a[0] = 100
+print(a)
+
+b = (10, 20, 30) # b[0] = 100print(b)
+
+Output:
+[100, 20, 30]
+(10, 20, 30)
+
+
+Lists support element reassignment, but tuples do not.
+Can we add or remove tuple elements?
+Tuples do not have list-style methods such as:
+- append()
+- extend()
+- insert()
+- remove()
+- pop()
+- clear()
+
+Calling these methods on a tuple raises AttributeError.
+
+Workaround: Convert the tuple into a list
+t = (10, 20, 30)
+temp = list(t)
+temp[0] = 100
+temp.append(40)
+t = tuple(temp)
+print(t)
+
+Output:
+(100, 20, 30, 40)
+
+
+This creates a modified tuple by constructing a new one.
+
+Important exception: Mutable objects inside tuples
+t = (10, [20, 30], 40)
+t[1].append(50)
+print(t)
+
+
+Output:
+(10, [20, 30, 50], 40)
+
+
+Why does this work?
+
+The tuple's elements cannot be reassigned, but the list stored inside the tuple remains mutable. Immutability of a tuple does not make every object inside it immutable.
+
+6. Tuple methods
+Tuples have two main methods.
+
+A. count()
+The count() method returns how many times a value occurs.
+
+Syntax:
+tuple_name.count(value)
+
+Example:
+t = (10, 20, 10, 30, 10, 40)
+print(t.count(10))
+print(t.count(20))
+print(t.count(100))
+
+Output:
+3
+1
+0
+
+
+If the value does not exist, count() returns 0.
+
+B. index()
+The index() method returns the index of the first occurrence of a value.
+t = (10, 20, 30, 20, 40)
+print(t.index(20))
+print(t.index(40))
+
+Output:
+1
+4
+
+
+If the value does not exist, index() raises ValueError.
+
+A safe approach is:
+t = (10, 20, 30)
+value = 99
+if value in t:
+   print(t.index(value))
+else:    
+   print("Value not found")
+
+Output:
+Value not found
+
+
+7. Built-in functions used with tuples
+
+These are built-in Python functions, not tuple methods.
+
+Function	Purpose
+len(t)	        Returns the number of elements
+min(t)	        Returns the smallest element
+max(t)	        Returns the largest element
+sum(t)	        Adds numeric elements
+sorted(t)	Returns a sorted list
+reversed(t)	Returns a reverse iterator
+tuple(iterable)	Creates a tuple from an iterable
+
+Example:
+t = (10, 20, 30, 40)
+print(len(t))
+print(min(t))
+print(max(t))
+print(sum(t))
+
+Output:
+4
+10
+40
+100
+
+
+Another example:
+t = (30, 10, 20)
+print(sorted(t))
+print(tuple(reversed(t)))
+
+Output:
+[10, 20, 30]
+(20, 10, 30)
+
+
+Important: sorted() returns a list, not a tuple. The second statement converts the reverse iterator into a tuple.
+
+8. Tuple operators
+
+A. Concatenation using +
+Combines two tuples to create a new tuple.
+a = (10, 20)
+b = (30, 40)
+print(a + b)
+
+Output:
+(10, 20, 30, 40)
+
+
+B. Repetition using *
+t = (1, 2)
+ print(t * 3)
+
+
+
+Output:
+(1, 2, 1, 2, 1, 2)
+
+
+C. Membership operators
+t = ("Java", "Python", "SQL")
+print("Python" in t)
+print("C++" not in t)
+
+Output:
+True
+True
+
+
+D. Comparison operators
+
+Tuples are compared element by element, from left to right, until a difference is found.
+print((10, 20) == (10, 20))
+print((10, 20) < (10, 30))
+print((10, 20) == (20, 10))
+
+Output:
+True
+True
+False
+
+
+In the second comparison, the first elements are equal, so Python compares 20 with 30.
+
+9. Looping through a Tuple
+
+A. Using a for loop
+
+languages = ("Java", "Python", "SQL")
+for language in languages :    
+print(language)
+
+
+Output:
+Java
+Python
+SQL
+
+
+B. Using a while loop
+
+numbers = (10, 20, 30, 40)
+i = 0
+while i < len(numbers):
+    print(numbers[i])    
+    i += 1
+
+Output:
+10
+20
+30
+40
+
+
+C. Using enumerate()
+
+enumerate() provides both the index and the element.
+
+subjects = ("Python", "Java", "SQL")
+for index, subject in enumerate(subjects):
+    print(index, subject)
+
+Output:
+0 Python
+1 Java
+2 SQL
+
+
+
+10. Tuple packing and unpacking : 
+
+A. Tuple packing
+
+Packing means putting multiple values together into one tuple.
+
+student = "Rahul", 22, "Pune"
+print(student)
+print(type(student))
+
+Output:
+('Rahul', 22, 'Pune')
+<class 'tuple'>
+
+
+B. Tuple unpacking
+
+Unpacking means assigning the tuple's elements to separate variables.
+student = ("Rahul", 22, "Pune")
+name, age, city = student
+print(name)
+print(age)
+print(city)
+
+Output:
+Rahul
+22
+Pune
+
+
+The number of variables normally must match the number of tuple elements. Otherwise, Python raises ValueError.
+
+C. Swapping two variables
+
+a = 10
+b = 20
+a, b = b, a
+print(a)
+print(b)
+
+Output:
+20
+10
+
+This is a common Python technique that does not require a temporary variable.
+
+D. Extended unpacking using *
+
+numbers = (10, 20, 30, 40, 50)
+first, *middle, last = numbers
+print(first)
+print(middle)
+print(last)
+
+
+Output:
+10
+[20, 30, 40]
+50
+
+
+Notice that middle is a list, not a tuple.
+
+11. Nested tuples
+A nested tuple is a tuple that contains other tuples.
+
+students = (("Rahul", 80),("Priya", 90),("Amit", 85))
+print(students[0])
+print(students[1][0])
+print(students[2][1])
+
+Output:
+('Rahul', 80)
+Priya
+85
+
+Loop through nested tuples :
+students = (("Rahul", 80),("Priya", 90),("Amit", 85))
+for name, marks in students:
+    print(name, marks)
+
+Output:
+Rahul 80
+Priya 90
+Amit 85
+
+
+This is a useful combination of tuple unpacking and loops.
+
+12. Tuple vs List
+
+Feature	             List	         Tuple
+Syntax	            [10, 20, 30]	(10, 20, 30)
+Ordered	              Yes	         Yes
+Duplicates	     Allowed	         Allowed
+Mutable	               Yes	        No, elements cannot be reassigned
+Indexing	      Supported	       Supported
+Slicing	              Supported 	Supported
+Methods	            Many methods	count(), index()
+Add elements    append(), extend()	No direct list-style methods
+Remove elements	remove(), pop()	        No direct list-style methods
+Typical use	Data that changes	Data whose element assignments should remain fixed
+
+Real-world examples
+Use a list for a shopping cart because items may change.
+cart = ["Milk", "Bread"]
+cart.append("Eggs")
+print(cart)
+
+Output:
+['Milk', 'Bread', 'Eggs']
+
+
+Use a tuple for a coordinate pair when you want to prevent direct reassignment of its elements.
+
+location = (18.5204, 73.8567)
+print(location)
+
+Output:
+(18.5204, 73.8567)
+
+
+A tuple does not automatically make all objects stored inside it immutable.
+
+13. Aliasing, conversion, and identity
+A. Aliasing
+a = (10, 20, 30)
+b = a
+print(a is b)
+
+Output:
+True
+
+Here, a and b refer to the same tuple object.
+
+B. Convert a list into a tuple : 
+
+numbers = [10, 20, 30]
+t = tuple(numbers)
+numbers[0] = 100
+print(numbers)
+print(t)
+
+Output:
+[100, 20, 30]
+(10, 20, 30)
+
+
+Changing the original list later does not replace the tuple's elements.
+
+C. Mutable object inside a tuple
+
+a = [10, 20]
+t = (a, 30)
+a.append(40)
+print(t)
+
+Output:
+([10, 20, 40], 30)
+
+
+The tuple still refers to the same inner list, which can change.
+
+
+
+16. Twenty Tuple practice programs
+
+1. Create a tuple containing five integers and print it.
+2. Create a tuple containing a string, integer, float, and Boolean value.
+3. Create a single-element tuple and verify its datatype.
+4. Print the first, middle, and last elements of a tuple.
+5. Reverse a tuple using slicing.
+6. Print every second element using slicing.
+7. Count how many times 25 occurs in a tuple.
+8. Find the index of a given element.
+9. Calculate the sum and average of numeric tuple elements.
+10. Count even and odd numbers in a tuple.
+11. Find the maximum and minimum values.
+12. Check whether a particular value exists in a tuple.
+13. Convert a list into a tuple.
+14. Unpack a tuple into four variables.
+15. Swap two variables using tuple unpacking.
+16. Access a specific value from a nested tuple.
+17. Remove duplicate values while preserving order.
+18. Find the second-largest distinct number.
+19. Sort a tuple in ascending order and convert the result back into a tuple.
+20. Create a tuple of student names and marks, then print each student's details.
+
