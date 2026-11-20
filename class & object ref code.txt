@@ -1,0 +1,142 @@
+class & object ref code : 
+
+
+
+# class Car():
+
+#     def detail(self,name,type,clr,modelyr,price):
+#         self.name = name
+#         self.type = type
+#         self.clr =clr
+#         self.modelyr =modelyr
+#         self.price = price
+
+#     def stering(self):
+#         print("Stering logic")
+
+#     def display(self):
+#          print("Car Name  --> ",self.name)    
+#          print("Car Type  --> ",self.type)  
+#          print("Car clr  --> ",self.clr)  
+#          print("Car Model YR  --> ",self.modelyr)  
+#          print("Car Price  --> ",self.price)  
+
+# bmw = Car()
+# bmw.detail("alto","Suv","red",2009,500000)
+# bmw.display()
+# bmw.stering()
+
+
+# audi = Car()
+# audi.detail("swift","suv","white",2014,700000)
+# audi.display()
+# audi.stering()
+
+
+
+
+# class Student():
+
+#     def m1(self):
+#     #    self.name = name
+#        print("hii")
+    
+#     def m2(self):
+#        self.m1()
+
+
+# s1 = Student()
+# s1.m1()
+# s1.m2()
+
+# s2 = Student()
+# s2.m2()
+
+
+# class Employee():
+
+#     def setDeatails(self):
+#         self.name = "ritesh"
+#         self.age = 23
+#         self.city = "pune" 
+
+#     def display(self):
+#         print(self.name)
+#         print(self.age)
+#         print(self.city)
+
+
+# emp = Employee()
+# # emp.setDeatails()
+# emp.display()
+
+
+# class Vehicle():
+
+    # def __init__(self):
+    #     self.v_id = 1234566
+    #     self.v_name = "car"
+    #     print("Bye ")
+
+
+    # def info(self): 
+    #       print(self.v_id)       
+    #       print(self.v_name)
+
+
+# v = Vehicle()
+# v.info()
+
+
+
+
+
+
+# class Hospital():
+
+#     def __init__(self,p_name,id,dr_name):
+#         self.name = p_name
+#         self.id = id
+#         self.drName = dr_name
+#         print("HHHH")
+
+#     def details(self):
+#         print(self.name) 
+#         print(self.id)   
+#         print(self.drName)     
+
+
+
+# h = Hospital("ram",345,"shyam")
+# # h = Hospital()
+# h.details()
+
+# RRR = "RRR"   # global 
+
+# class Company():
+
+#    c_Name ="TCS"     #  class variable / static 
+
+#    def __init__(self,name,salary):
+#       self.name = name      #  instance variable 
+#       self.salary = salary
+#       a = 45
+#       b = 34
+#       add = a+b
+#       print(add)
+
+
+#    def emp_info(self):
+#       print(self.name,RRR)
+#       print(self.salary)
+#       print(Company.c_Name)
+
+
+# c = Company("ritesh",30000)
+# c.emp_info()
+
+# c1 = Company("mahesh",40000)
+# c1.emp_info()
+
+# c1 = Company("Shyam",50000)
+# c1.emp_info()
