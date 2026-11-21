@@ -1,0 +1,180 @@
+Practise Questions : 
+
+1. Student Management System
+
+Create a Student class with the following attributes:
+- Student name
+- Roll number
+- Course
+Create a method display_details() to display all student information. Create three student objects.
+
+2. Employee Salary Details
+
+Create an Employee class with:
+- Employee name
+- Employee ID
+- Basic salary
+Create a method calculate_salary() that calculates and displays the annual salary.
+
+3. Mobile Phone Details
+
+Create a Mobile class with brand, model and price.
+
+Create the following methods:
+- display_details()
+- apply_discount(discount)
+   Pass the discount amount as an argument and display the final price.
+
+4. Bank Account
+
+Create a BankAccount class with account holder name and balance.
+
+Create methods:
+- deposit(amount)
+- withdraw(amount)
+- display_balance()
+   Perform deposit and withdrawal operations.
+
+5. Car Rental System
+
+Create a Car class with car name, rent per day and number of rental days.
+
+Create a method calculate_rent() that accepts the number of days and calculates the total rental amount.
+Section 2: Constructors – No Args & Args
+6. Laptop Information – No-Argument Constructor
+
+Create a Laptop class with a no-argument constructor.
+
+Initialize the following values inside the constructor:
+- Brand = Dell
+- RAM = 16GB
+- Price = 55000
+   Create a method to display laptop details.
+
+7. Book Information – Parameterized Constructor
+
+Create a Book class with a parameterized constructor accepting:
+- Book name
+- Author name
+- Book price
+   Create two objects with different information.
+
+8. Rectangle Area
+
+Create a Rectangle class with a parameterized constructor accepting length and width.
+
+Create a method calculate_area() to calculate and display the area.
+
+9. Electricity Bill
+
+Create an ElectricityBill class with a parameterized constructor accepting:
+- Customer name
+- Units consumed
+Create a method calculate_bill() using the following conditions:
+- First 100 units: ₹5 per unit
+- Next 100 units: ₹7 per unit
+- Above 200 units: ₹10 per unit
+10. Product Inventory
+
+Create a Product class with a parameterized constructor accepting product name, price and quantity.
+
+Create methods:
+- display_product()
+- calculate_total_price()
+- update_quantity(new_quantity)
+Section 3: Variables – Instance, Class & Local
+11. Company Employee Counter
+
+Create an Employee class with:
+- Class variable: company_name
+- Class variable: employee_count
+- Instance variables: employee_name, employee_id
+    Every time an object is created, increase the employee count by 1.
+
+    Display employee details and total employees.
+
+12. School Student Information
+
+Create a Student class with:
+- Class variable: school_name
+- Instance variables: student_name, roll_number
+- Local variable inside a method: percentage
+    Create a method to display complete student information.
+
+13. Shopping Cart
+
+Create a ShoppingCart class with:
+- Instance variable: customer_name
+- Instance variable: total_amount
+- Class variable: discount_percentage
+Create a method calculate_discount() that uses a local variable to calculate the final payable amount.
+
+14. Hospital Patient Management
+
+Create a Patient class with:
+- Class variable: hospital_name
+- Instance variables: patient_name, patient_age, disease
+Create a method display_patient() to display patient details.
+
+    Create three patient objects and display their information.
+
+15. Online Course Management
+
+Create a Course class with:
+- Class variable: institute_name
+- Instance variables: course_name, course_fee
+- Local variable: discount
+Create a method calculate_fee() that calculates the final course fee after discount.
+Section 4: Methods, Arguments & Return Values
+16. ATM Withdrawal System
+
+Create an ATM class with account holder name and balance.
+
+Create methods:
+- check_balance()
+- withdraw(amount)
+- deposit(amount)
+    The withdrawal method should accept an argument and return the updated balance.
+
+17. Temperature Converter
+
+Create a Temperature class with temperature in Celsius.
+
+Create methods:
+- celsius_to_fahrenheit()
+- fahrenheit_to_celsius(fahrenheit)
+    Return the converted temperature.
+
+18. Student Result Management
+
+Create a StudentResult class with student name and marks in three subjects.
+
+Create methods:
+- calculate_total()
+- calculate_percentage()
+- display_result()
+    Return total marks and percentage using methods.
+
+19. Food Ordering System
+
+Create a FoodOrder class with:
+- Customer name
+- Food item
+- Food price
+- Quantity
+Create methods:
+- calculate_bill()
+- apply_coupon(discount)
+- display_order()
+    Calculate the final bill after applying the discount.
+
+20. Vehicle Management System
+
+Create a Vehicle class with:
+- Class variable: vehicle_count
+- Instance variables: vehicle_name, vehicle_type, vehicle_price
+Create methods:
+- display_details()
+- calculate_insurance(rate)
+- update_price(new_price)
+    Count the total vehicles created and calculate insurance using the given rate.
